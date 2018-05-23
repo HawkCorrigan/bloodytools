@@ -579,9 +579,9 @@ def secondary_distribution_simulations(
 
   # generate all valied secondary distributions
   for c in range(lower_border, upper_border + step_size, step_size):
-    for h in range(lower_border, upper_border + step_size, step_size):
-      for m in range(lower_border, upper_border + step_size, step_size):
-        for v in range(lower_border, upper_border + step_size, step_size):
+    for h in range(lower_border, upper_border + step_size-c, step_size):
+      for m in range(lower_border, upper_border + step_size-c-h, step_size):
+        for v in range(lower_border, upper_border + step_size-c-h-m, step_size):
           if c + h + m + v == 100:
             distribution_multipliers.append((c, h, m, v))
 
