@@ -12,7 +12,7 @@ python:
 branches:
   only:
     # only trigger CI on dev branch
-    - dev
+    - testing
 
 before_install:
   # activate out of the box python 3.6 environement
